@@ -1,0 +1,11 @@
+
+
+input{
+  width: 100%;
+  border: 1px solid black;
+}
+
+.item-container{
+  text-align: left;
+  font-weight: 500;
+}
