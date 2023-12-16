@@ -1,10 +1,10 @@
 import React from 'react'
 import styles from './Button.module.css'
 
-const Button = ({buttonArr}) => {
+const Button = ({buttonArr , onButtonClickHandler}) => {
   return (
     <>
-      {buttonArr.map(item => <button key={item} className={styles.button}>{item}</button>)}
+      {buttonArr.map(item => <button   onClick ={() => onButtonClickHandler(item)} key={item} className={styles.button} >{item}</button>)}
   
     </>
   )
