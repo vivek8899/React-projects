@@ -6,7 +6,7 @@ const ButtonContainer = ({onButtonClick}) => {
 
   const buttonnumbers=['C' , '1' , '2' ,'+' , '3' , '4' ,'-','5' , '6','*' ,'7','8','/' ,'=','9' ,'0','.'];
   return (
-    <div className={styles.buttonContainer}>
+    <div classNameName={styles.buttonContainer}>
     <Button buttonArr={buttonnumbers} onButtonClickHandler={onButtonClick}></Button>
       
   </div>

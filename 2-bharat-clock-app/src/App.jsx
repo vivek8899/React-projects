@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   
 
-  return <div className="container text-center">
+  return <div classNameName="container text-center">
     <ClockHeading/>
     <ClockSlogan/>
     <CurrTime/>

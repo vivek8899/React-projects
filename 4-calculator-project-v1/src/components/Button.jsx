@@ -4,7 +4,7 @@ import styles from './Button.module.css'
 const Button = ({buttonArr , onButtonClickHandler}) => {
   return (
     <>
-      {buttonArr.map(item => <button   onClick ={() => onButtonClickHandler(item)} key={item} className={styles.button} >{item}</button>)}
+      {buttonArr.map(item => <button   onClick ={() => onButtonClickHandler(item)} key={item} classNameName={styles.button} >{item}</button>)}
   
     </>
   )

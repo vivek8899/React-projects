@@ -2,7 +2,7 @@ import React from 'react'
 
 const ClockHeading = () => {
   return (
-    <h1 className='fw-bolder'>
+    <h1 classNameName='fw-bolder'>
     Bharat Clock
       
     </h1>

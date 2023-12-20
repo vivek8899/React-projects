@@ -4,7 +4,7 @@ import styles from './Display.module.css';
 const Display = ({calVal}) => {
   return (
     <>
-       <input type="text"  readOnly value={calVal} className={styles.display} />
+       <input type="text"  readOnly value={calVal} classNameName={styles.display} />
     </>
   )
 }

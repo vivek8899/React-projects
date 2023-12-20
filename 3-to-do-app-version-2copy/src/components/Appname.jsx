@@ -3,7 +3,7 @@ import styles from "./Appname.module.css";
 
 const AppName = () => {
   return (
-    <h1 className={styles.todoHeading}>
+    <h1 classNameName={styles.todoHeading}>
       To do app
     </h1>
   )

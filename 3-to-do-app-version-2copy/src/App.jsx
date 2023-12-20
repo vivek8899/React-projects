@@ -25,9 +25,9 @@ const handleDeleteItems = (todoitemName) => {
   setToDoItems(newTodoItems);
 }
 
-  return <center className='todo-container'>
+  return <center classNameName='todo-container'>
       
-      <div className="container text-center">
+      <div classNameName="container text-center">
 
       <Appname />
       <Addtodo onNewItem={handleonNewItem} />

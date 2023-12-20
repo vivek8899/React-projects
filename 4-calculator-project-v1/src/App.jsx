@@ -29,8 +29,8 @@ const onButtonClick = (buttontext)=> {
 }
 
   return (
-  <div className={styles.calculator}>
-  <h1 className='text-center'>Calculator</h1>
+  <div classNameName={styles.calculator}>
+  <h1 classNameName='text-center'>Calculator</h1>
    <Display calVal ={calval}/>
    <ButtonContainer
    onButtonClick={onButtonClick}></ButtonContainer>

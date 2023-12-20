@@ -8,12 +8,12 @@ import TodoList2 from './components/TodoList2';
 function App() {
  
 
-  return <center className='todo-container'>
+  return <center classNameName='todo-container'>
       
-      <div className="container text-center">
+      <div classNameName="container text-center">
       <Appname />
       <Addtodo />
-      <div className='item-container'>
+      <div classNameName='item-container'>
       <TodoList1 />
       <TodoList2 />
       </div>
