@@ -7,6 +7,7 @@ export const PostList = createContext({
   postList: [],
   addPost: () => {},
   deletePost: () => {},
+  addInitialPost: () =>{},
 });
 
 
@@ -16,8 +17,10 @@ const postListReducer = (currPostList , action) => {
   let newPostList = currPostList;
   if(action.type === 'DELETE_POST'){
     newPostList = currPostList.filter(post => post.id !== action.payload.postId);
-  }
-  else if(action.type == 'ADD_POST'){
+  }else if(action.type === "ADD_INITIAL_POST"){
+    newPostList = action.payload.posts;
+
+  }else if(action.type == 'ADD_POST'){
     newPostList  = [action.payload , ...currPostList];
   }
   return newPostList;
@@ -32,7 +35,7 @@ const postListReducer = (currPostList , action) => {
 const PostListProvider = ({ children }) =>{
 
 //useReducerHook
-const [postList , dispatchPostList] = useReducer(postListReducer , DEFAULT_POSTLIST);
+const [postList , dispatchPostList] = useReducer(postListReducer , []);
 
 
 //AddPost Handler
@@ -51,6 +54,17 @@ dispatchPostList({
 
 };
 
+const addInitialPost = (posts) => {
+  
+  dispatchPostList({
+    type:"ADD_INITIAL_POST",
+    payload:{
+    posts,
+    }
+  })  
+  
+  };
+
 
 //DeletePosthandler
 const deletePost = (postId) => {
@@ -68,28 +82,13 @@ dispatchPostList({
 
 
 return <PostList.Provider value={
-  {postList , addPost , deletePost}
+  {postList , addPost , deletePost , addInitialPost}
 }>{children}</PostList.Provider>
 };
 
 
 
-//Default data
-const DEFAULT_POSTLIST = [{
-  id: "1",
-  title: 'Update about trip',
-  body: 'hi friends how are you',
-  reactions: 0,
-  userId: 'user-2'
-},
-{
-  id: "2",
-  title: 'Update about trip 2',
-  body: 'hi friends chloge',
-  reactions: 2,
-  userId: 'user-4'
- 
-}];
+
 
 
 export default PostListProvider;
