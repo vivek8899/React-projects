@@ -6,11 +6,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   
 
-  return <div classNameName="container text-center">
+  return <center>
+  <div className="text-center container mt-5">
     <ClockHeading/>
     <ClockSlogan/>
     <CurrTime/>
-  </div>
+    </div>
+  </center>
 }
 
 export default App
